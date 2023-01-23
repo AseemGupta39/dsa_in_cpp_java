@@ -3,6 +3,8 @@ using namespace std;
 
 void pointer_to_pointer();
 void p_swap(int* a,int* b);
+void print_array(int arr[],int size);
+
 
 int main()
 {
@@ -19,6 +21,9 @@ int main()
 	p_swap(aptr,bptr);
 
 	cout << a << " " << b << endl; 
+	
+	int arr[] = {5,3,6,9};
+	print_array(arr,sizeof(arr)/sizeof(arr[0]));
 
 	return 0;
 }
@@ -43,4 +48,13 @@ void pointer_to_pointer()
     cout << *q << endl;
     cout << **q << endl;
 
+}
+
+void print_array(int arr[],int size)
+{
+	int i;
+	for(i=0;i<size;i++)
+	{
+		cout<<*(arr+i)<<" ";
+	}
 }
